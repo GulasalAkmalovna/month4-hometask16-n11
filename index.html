@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <form>
+            <h1>Create New Task</h1>
+            <input name="name" type="text" placeholder="Task name..." onchange="handleChange(event)">
+            <select name="status" onchange="handleChange(event)">
+                <option selected value="" disabled>Select Task Status</option>
+                <option value="open">Open</option>
+                <option value="pending">Pending</option>
+                <option value="inprog">Inprog</option>
+                <option value="complete">Complate</option>
+            </select>
+            <div>
+                <button id="save-btn">Save</button>
+                <button>Exit</button>
+            </div>
+        </form>
+
+        <div class="status-wrapper">
+            <div class="open">
+                <h2>OPEN</h2>
+                <div class="result"></div>
+            </div>
+            <div class="pending">
+                <h2>PENDING</h2>
+                <div class="result2"></div>
+            </div>
+            <div class="inprog">
+                <h2>INPROG</h2>
+                <div class="result3"></div>
+            </div>
+            <div class="complete">
+                <h2>COMPLETE</h2>
+                <div class="result4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/app.js"></script>
+</body>
+
+</html>
